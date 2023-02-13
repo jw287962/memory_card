@@ -4,7 +4,6 @@ const Image = (props) => {
 
 const [image,setImage] = useState(props.currentImage);
 
-console.log(image.imageFile, "image componenet");
 
   return (
       <img src={image.imageFile}></img>

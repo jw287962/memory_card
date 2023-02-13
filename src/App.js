@@ -5,7 +5,6 @@ import Image from './components/Image';
 
 
 const allOriginalImages = importAll(require.context('./images',false,/\.(png|jpe?g|svg)$/));
-console.log(allOriginalImages);
 
 function importAll(img){
   let object = [];
@@ -21,7 +20,16 @@ function importAll(img){
   return object;
 }
 
+function getNewRandomImageArray(images){
+  let newImageArray = []
+  for(let i = images.length-1 ;i >= 0; i--){
+    newImageArray.push(images[i]);
+  }
+return newImageArray;
+}
 
+
+// 
 const App = (props) => {
 
 const [counter,setCount] = useState(0);
@@ -32,8 +40,8 @@ const [clickedImages, setClickedImages] = useState();
 const clickedImage = (e) => {
   e.preventDefault();
   console.log(e.target.parentElement)
-
-  setImages()
+  let newImageArray = getNewRandomImageArray(images);
+  setImages(newImageArray);
 }
 
 console.log(images);
@@ -43,17 +51,15 @@ console.log(images);
     <div className="App">
       Memory Card: 
       <div className='images'>
-            {images.map((image) => {
+            {images.map((image,i) => {
+                if (i <= 3)
                 return(
-                  <button className={image.imageName} onClick={clickedImage}> <Image currentImage={image}></Image></button>
-
+                  <button className={image.imageName} key={image.imageName} onClick={clickedImage}> <Image currentImage={image}></Image></button>
                 )
+                else{
+                }
 
             })}
-
-          <button className={images[0].imageName} onClick={clickedImage}> <Image currentImage={images[0]}></Image></button>
-          {/* <button> <Image></Image></button> */}
-          {/* <button> <Image></Image></button> */}
 
 
       </div>
