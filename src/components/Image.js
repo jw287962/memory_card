@@ -5,7 +5,6 @@ const Image = (props) => {
 
 const [image] = useState(props.currentImage);
 
-
   return (
       <img src={image.imageFile} width="150" height="150" alt={image.imageName}></img>
 

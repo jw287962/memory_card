@@ -83,7 +83,7 @@ const App = (props) => {
 
     
     <div className="App">
-      <div className='header'>Memory Card: </div>
+      <div className='header'>Memory Card </div>
       <div className='scoreboard'>
         <div className='counter'>Counter: {counter}</div>
         <div>Highscore: {highscore}</div>
