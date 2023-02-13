@@ -3,7 +3,7 @@ import './image.css'
 
 const Image = (props) => {
 
-const [image,setImage] = useState(props.currentImage);
+const [image] = useState(props.currentImage);
 
 
   return (
