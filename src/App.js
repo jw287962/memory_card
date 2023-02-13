@@ -78,6 +78,7 @@ const increaseCounter = () => {
       <div className='header'>Memory Card: </div>
       <div className='scoreboard'>
         <div className='counter'>Counter: {counter}</div>
+        <div>Highscore: {highscore}</div>
       </div>
       <div className='images'>
             {images.map((image,i =0) => {
