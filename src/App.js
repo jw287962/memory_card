@@ -39,16 +39,21 @@ const App = (props) => {
 
   const clickedImage = (e) => {
       e.preventDefault();
-      let arrayNum = e.target.parentElement.getAttribute('akey')-1;
+      console.log(e.target.parentElement);
+
+      let arrayNum = e.target.parentElement.getAttribute('akey');
       console.log(arrayNum);
       let newImageArray = getNewRandomImageArray(images);
+      console.log(newImageArray,'all imagesarray')
       let clicked = false;
 
+        console.log(clickedImages);
       clickedImages.forEach(element => {
         console.log(images[arrayNum].imageName);
+        console.log(element);
         if(element.imageName === images[arrayNum].imageName){
           console.log("clicked");
-          setClickedImages([])
+          setClickedImages([]);
           setHighScore(counter);
           setCount(0);
           clicked = true;
@@ -59,6 +64,7 @@ const App = (props) => {
       if(clicked){
 
       }else{
+        console.log('updating clickedimages with new clicked image')
         setClickedImages(clickedImages.concat(images[arrayNum]));
       setImages(newImageArray);
 
@@ -89,11 +95,11 @@ const App = (props) => {
         <div>Highscore: {highscore}</div>
       </div>
       <div className='images'>
-            {images.map((image,i =0) => {
-                if (i < 4){
+            {images.map((image,i=0) => {
+                if (i < 7){
                   i++;
                   return(
-                    <button className={image.imageName} id="pokeimages" akey={i}key={image.imageName} onClick={clickedImage}> <Image currentImage={image}></Image></button>
+                    <button className={image.imageName} id="pokeimages" akey={i-1} key={image.imageName} onClick={clickedImage}> <Image currentImage={image}></Image></button>
                   )
                 }
                 
