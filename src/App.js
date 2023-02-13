@@ -42,14 +42,30 @@ const clickedImage = (e) => {
   let arrayNum = e.target.parentElement.getAttribute('akey')-1;
   console.log(arrayNum);
   let newImageArray = getNewRandomImageArray(images);
+  let clicked = false;
 
+clickedImages.forEach(element => {
+    console.log(images[arrayNum].imageName);
+    if(element.imageName === images[arrayNum].imageName){
+      console.log("clicked");
+      setClickedImages([])
+      setHighScore(counter);
+      setCount(0);
+      clicked = true;
+      return;
+    }
+  });
 
-  setClickedImages(clickedImages.concat(images[arrayNum]));
-console.log(images[arrayNum])
+  if(clicked){
+
+  }else{
+    setClickedImages(clickedImages.concat(images[arrayNum]));
   setImages(newImageArray);
 
   
   increaseCounter();
+  }
+  
 }
 
 const increaseCounter = () => {
