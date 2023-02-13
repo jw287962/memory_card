@@ -21,10 +21,15 @@ function importAll(img){
 }
 
 function getNewRandomImageArray(images){
-  let newImageArray = []
-  for(let i = images.length-1 ;i >= 0; i--){
-    newImageArray.push(images[i]);
+  const newImageArray = []
+  console.log(images);
+  const originalImageHolder = images.map(a => ({a}));
+  console.log(originalImageHolder);
+  while(originalImageHolder.length >0){
+    let random = Math.floor(Math.random(originalImageHolder.length));
+    newImageArray.push(originalImageHolder.splice(random,1))
   }
+  // console.log(newImageArray);
 return newImageArray;
 }
 
@@ -39,20 +44,13 @@ const App = (props) => {
 
   const clickedImage = (e) => {
       e.preventDefault();
-      console.log(e.target.parentElement);
 
       let arrayNum = e.target.parentElement.getAttribute('akey');
-      console.log(arrayNum);
       let newImageArray = getNewRandomImageArray(images);
-      console.log(newImageArray,'all imagesarray')
       let clicked = false;
 
-        console.log(clickedImages);
       clickedImages.forEach(element => {
-        console.log(images[arrayNum].imageName);
-        console.log(element);
         if(element.imageName === images[arrayNum].imageName){
-          console.log("clicked");
           setClickedImages([]);
           setHighScore(counter);
           setCount(0);
@@ -64,7 +62,6 @@ const App = (props) => {
       if(clicked){
 
       }else{
-        console.log('updating clickedimages with new clicked image')
         setClickedImages(clickedImages.concat(images[arrayNum]));
       setImages(newImageArray);
 
