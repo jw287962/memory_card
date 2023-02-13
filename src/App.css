@@ -7,13 +7,18 @@
 
 .header{
   height: 50px;
+  width: 100vw;
   display: flex;
+  justify-content: center;
   align-items: center;
+  border-bottom: 1px solid black;
 }
 .scoreboard{
   border: 2px solid black;
   width: 100px;
   margin: 10px;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 

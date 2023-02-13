@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import './image.css'
 
 const Image = (props) => {
 

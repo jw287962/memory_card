@@ -62,7 +62,7 @@ const increaseCounter = () => {
                 if (i < 3){
                   i++;
                   return(
-                    <button className={image.imageName} key={image.imageName} onClick={clickedImage}> <Image currentImage={image}></Image></button>
+                    <button className={image.imageName} id="pokeimages" key={image.imageName} onClick={clickedImage}> <Image currentImage={image}></Image></button>
                   )
                 }
                 
