@@ -35,14 +35,20 @@ const App = (props) => {
 const [counter,setCount] = useState(0);
 const [highscore,setHighScore] = useState(0);
 const [images,setImages] = useState(allOriginalImages);
-const [clickedImages, setClickedImages] = useState();
+const [clickedImages, setClickedImages] = useState([]);
 
 const clickedImage = (e) => {
   e.preventDefault();
-  console.log(e.target.parentElement)
+  let arrayNum = e.target.parentElement.getAttribute('akey')-1;
+  console.log(arrayNum);
   let newImageArray = getNewRandomImageArray(images);
+
+
+  setClickedImages(clickedImages.concat(images[arrayNum]));
+console.log(images[arrayNum])
   setImages(newImageArray);
 
+  
   increaseCounter();
 }
 
@@ -62,7 +68,7 @@ const increaseCounter = () => {
                 if (i < 3){
                   i++;
                   return(
-                    <button className={image.imageName} id="pokeimages" key={image.imageName} onClick={clickedImage}> <Image currentImage={image}></Image></button>
+                    <button className={image.imageName} id="pokeimages" akey={i}key={image.imageName} onClick={clickedImage}> <Image currentImage={image}></Image></button>
                   )
                 }
                 
