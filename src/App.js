@@ -102,8 +102,9 @@ const App = (props) => {
                   i++;
             })}
 
-          <button className='skip' onClick={changeImages}>Skip!</button>
       </div>
+      <button className='skip' onClick={changeImages}>Skip!</button>
+
     </div>
   );
 }

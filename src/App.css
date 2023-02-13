@@ -23,6 +23,8 @@
 
 .skip{
   background-color: white;
+  margin: 8px;
+  padding: 4px 10px;
+  border-radius: 5px;
 }
-
 
