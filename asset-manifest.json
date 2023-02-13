@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.f37e7d72.css",
-    "main.js": "/react-gh-pages/static/js/main.f1fa1afd.js",
-    "static/js/787.d6a8b40f.chunk.js": "/react-gh-pages/static/js/787.d6a8b40f.chunk.js",
-    "static/media/Pachirisu.gif": "/react-gh-pages/static/media/Pachirisu.73ac81d2aceb11ee0a54.gif",
-    "static/media/froakie.gif": "/react-gh-pages/static/media/froakie.651f943c1897605a28c2.gif",
-    "static/media/chespin.gif": "/react-gh-pages/static/media/chespin.44d2e66ea11664519720.gif",
-    "index.html": "/react-gh-pages/index.html",
-    "main.f37e7d72.css.map": "/react-gh-pages/static/css/main.f37e7d72.css.map",
-    "main.f1fa1afd.js.map": "/react-gh-pages/static/js/main.f1fa1afd.js.map",
-    "787.d6a8b40f.chunk.js.map": "/react-gh-pages/static/js/787.d6a8b40f.chunk.js.map"
+    "main.css": "/memory_card/static/css/main.f37e7d72.css",
+    "main.js": "/memory_card/static/js/main.3cd2c2cb.js",
+    "static/js/787.d6a8b40f.chunk.js": "/memory_card/static/js/787.d6a8b40f.chunk.js",
+    "static/media/Pachirisu.gif": "/memory_card/static/media/Pachirisu.73ac81d2aceb11ee0a54.gif",
+    "static/media/froakie.gif": "/memory_card/static/media/froakie.651f943c1897605a28c2.gif",
+    "static/media/chespin.gif": "/memory_card/static/media/chespin.44d2e66ea11664519720.gif",
+    "index.html": "/memory_card/index.html",
+    "main.f37e7d72.css.map": "/memory_card/static/css/main.f37e7d72.css.map",
+    "main.3cd2c2cb.js.map": "/memory_card/static/js/main.3cd2c2cb.js.map",
+    "787.d6a8b40f.chunk.js.map": "/memory_card/static/js/787.d6a8b40f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f37e7d72.css",
-    "static/js/main.f1fa1afd.js"
+    "static/js/main.3cd2c2cb.js"
   ]
 }
