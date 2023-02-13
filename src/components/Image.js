@@ -6,7 +6,7 @@ const [image,setImage] = useState(props.currentImage);
 
 
   return (
-      <img src={image.imageFile}></img>
+      <img src={image.imageFile} width="150" height="150" alt={image.imageName}></img>
 
   )
 }

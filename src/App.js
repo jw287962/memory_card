@@ -4,7 +4,7 @@ import Image from './components/Image';
 
 
 
-const allOriginalImages = importAll(require.context('./images',false,/\.(png|jpe?g|svg)$/));
+const allOriginalImages = importAll(require.context('./images',false,/\.(png|jpe?g|svg|gif)$/));
 
 function importAll(img){
   let object = [];
@@ -42,23 +42,33 @@ const clickedImage = (e) => {
   console.log(e.target.parentElement)
   let newImageArray = getNewRandomImageArray(images);
   setImages(newImageArray);
+
+  increaseCounter();
 }
 
-console.log(images);
+const increaseCounter = () => {
+  setCount(counter +1);
+}
   return (
 
-
+    
     <div className="App">
-      Memory Card: 
+      <div className='header'>Memory Card: </div>
+      <div className='scoreboard'>
+        <div className='counter'>Counter: {counter}</div>
+      </div>
       <div className='images'>
-            {images.map((image,i) => {
-                if (i <= 3)
-                return(
-                  <button className={image.imageName} key={image.imageName} onClick={clickedImage}> <Image currentImage={image}></Image></button>
-                )
+            {images.map((image,i =0) => {
+                if (i < 3){
+                  i++;
+                  return(
+                    <button className={image.imageName} key={image.imageName} onClick={clickedImage}> <Image currentImage={image}></Image></button>
+                  )
+                }
+                
                 else{
                 }
-
+                  i++;
             })}
 
 
