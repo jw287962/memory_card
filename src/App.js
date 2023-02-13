@@ -21,15 +21,16 @@ function importAll(img){
 }
 
 function getNewRandomImageArray(images){
-  const newImageArray = []
+  const newImageArray = [];
   console.log(images);
-  const originalImageHolder = images.map(a => ({a}));
+  const originalImageHolder = [...images];
+ 
   console.log(originalImageHolder);
   while(originalImageHolder.length >0){
-    let random = Math.floor(Math.random(originalImageHolder.length));
-    newImageArray.push(originalImageHolder.splice(random,1))
+    let random = Math.floor(Math.random()*originalImageHolder.length);
+    newImageArray.push(originalImageHolder.splice(random,1)[0])
   }
-  // console.log(newImageArray);
+  console.log(newImageArray);
 return newImageArray;
 }
 
