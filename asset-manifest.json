@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/memory_card/static/css/main.f37e7d72.css",
-    "main.js": "/memory_card/static/js/main.ef827a77.js",
+    "main.js": "/memory_card/static/js/main.f2ab6249.js",
     "static/js/787.d6a8b40f.chunk.js": "/memory_card/static/js/787.d6a8b40f.chunk.js",
     "static/media/Pachirisu.gif": "/memory_card/static/media/Pachirisu.73ac81d2aceb11ee0a54.gif",
     "static/media/fennekin.gif": "/memory_card/static/media/fennekin.d12c255e3be77b34ac0d.gif",
@@ -11,11 +11,11 @@
     "static/media/eevee.gif": "/memory_card/static/media/eevee.c7b1a7770e9e3301d40c.gif",
     "index.html": "/memory_card/index.html",
     "main.f37e7d72.css.map": "/memory_card/static/css/main.f37e7d72.css.map",
-    "main.ef827a77.js.map": "/memory_card/static/js/main.ef827a77.js.map",
+    "main.f2ab6249.js.map": "/memory_card/static/js/main.f2ab6249.js.map",
     "787.d6a8b40f.chunk.js.map": "/memory_card/static/js/787.d6a8b40f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f37e7d72.css",
-    "static/js/main.ef827a77.js"
+    "static/js/main.f2ab6249.js"
   ]
 }
