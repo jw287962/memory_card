@@ -50,7 +50,7 @@ const App = (props) => {
       clickedImages.forEach(element => {
         if(element.imageName === images[arrayNum].imageName){
           setClickedImages([]);
-          setHighScore(counter);
+         isHighScore(counter);
           setCount(0);
           clicked = true;
           return;
@@ -74,7 +74,14 @@ const App = (props) => {
       setImages(newImageArray);
     }
 
-  
+    const isHighScore = () => {
+      if(counter > highscore)
+      setHighScore(counter);
+      else{
+        return;
+      }
+
+    }
 
     const increaseCounter = () => {
       setCount(counter +1);
