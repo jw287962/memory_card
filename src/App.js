@@ -88,8 +88,6 @@ const App = (props) => {
     }
   
     return (
-
-    
     <div className="App">
       <div className='header'>Memory Card </div>
       <div className='scoreboard'>
@@ -108,6 +106,8 @@ const App = (props) => {
                 else{
                 }
                   i++;
+                  return null;
+
             })}
 
       </div>
